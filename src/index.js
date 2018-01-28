@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Counter from './Counter';
+import CounterButtons from './CounterButtons';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
@@ -27,7 +28,10 @@ const store = createStore(reducer);
 
 const App = () => (
   <Provider store={store}>
-    <Counter />
+    <div>
+      <Counter />
+      <CounterButtons />
+    </div>
   </Provider>
 );
 
