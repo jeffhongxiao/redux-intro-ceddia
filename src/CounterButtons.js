@@ -7,7 +7,7 @@ class CounterButtons extends React.Component {
     this.props.dispatch({type: 'INCREMENT'});
   }
 
-  decrement= () => {
+  decrement = () => {
     this.props.dispatch({type: 'DECREMENT'});
   }
 

@@ -2,8 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class Counter extends React.Component {
-  state = { count: 0 }
-
   render() {
     return (
       <div>
