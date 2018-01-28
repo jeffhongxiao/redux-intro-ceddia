@@ -21,10 +21,5 @@ class CounterButtons extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    // empty. just for this.props.dispatch() in functions
-  }
-}
-
-export default connect(mapStateToProps)(CounterButtons);
+// Inject just dispatch and don't listen to store
+export default connect()(CounterButtons);
