@@ -4,7 +4,7 @@ import Counter from './Counter';
 import CounterButtons from './CounterButtons';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
-import logger from 'redux-logger';
+import { createLogger } from 'redux-logger';
 
 const initialState = {
   count: 0
@@ -25,9 +25,15 @@ function reducer(state = initialState, action) {
   }
 }
 
+const logger = createLogger({
+    collapsed: true,
+    diff: true,
+})
+
 const store = createStore(
   reducer,
-  applyMiddleware(logger));
+  applyMiddleware(logger)
+);
 
 const App = () => (
   <Provider store={store}>
