@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import './CounterButton.css';
+
 class CounterButtons extends React.Component {
 
   increment = () => {
@@ -14,8 +16,8 @@ class CounterButtons extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.increment}>Increase</button>
-        <button onClick={this.decrement}>Decrease</button>
+        <button className="increaseButton" onClick={this.increment}>Increase</button>
+        <button className="decreaseButton" onClick={this.decrement}>Decrease</button>
       </div>
     );
   }
