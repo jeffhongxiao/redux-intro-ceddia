@@ -1,4 +1,4 @@
-
+import * as ActionTypes from './ActionTypes';
 
 const initialState = {
   count: 0
@@ -6,11 +6,11 @@ const initialState = {
 
 function reducer(state = initialState, action) {
   switch (action.type) {
-    case 'INCREMENT':
+    case ActionTypes.INCREMENT:
       return {
         count: state.count + 1
       };
-    case 'DECREMENT':
+    case ActionTypes.DECREMENT:
       return {
         count: state.count - 1
       };

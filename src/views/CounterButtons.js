@@ -1,16 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import * as ActionTypes from '../ActionTypes';
+
 import './CounterButton.css';
 
 class CounterButtons extends React.Component {
 
   increment = () => {
-    this.props.dispatch({type: 'INCREMENT'});
+    this.props.dispatch({
+      type: ActionTypes.INCREMENT
+    });
   }
 
   decrement = () => {
-    this.props.dispatch({type: 'DECREMENT'});
+    this.props.dispatch({
+      type: ActionTypes.DECREMENT
+    });
   }
 
   render() {
