@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 
 import './CounterButton.css';
 import * as Actions from '../Actions.js';
@@ -13,6 +15,11 @@ class CounterButtons extends React.Component {
       </div>
     );
   }
+}
+
+CounterButtons.propTypes = {
+  onIncrement: PropTypes.func.isRequired,
+  onDecrement: PropTypes.func.isRequired
 }
 
 const mapStateToProps = () => {
