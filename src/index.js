@@ -2,8 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
-import Counter from './Counter';
-import CounterButtons from './CounterButtons';
+import Counter from './views/Counter';
+import CounterButtons from './views/CounterButtons';
 import store from './Store';
 
 const App = () => (
