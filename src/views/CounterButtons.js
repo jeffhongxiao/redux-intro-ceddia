@@ -1,33 +1,36 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import * as ActionTypes from '../ActionTypes';
-
 import './CounterButton.css';
+import * as Actions from '../Actions.js';
 
 class CounterButtons extends React.Component {
-
-  increment = () => {
-    this.props.dispatch({
-      type: ActionTypes.INCREMENT
-    });
-  }
-
-  decrement = () => {
-    this.props.dispatch({
-      type: ActionTypes.DECREMENT
-    });
-  }
-
   render() {
     return (
       <div>
-        <button className="increaseButton" onClick={this.increment}>Increase</button>
-        <button className="decreaseButton" onClick={this.decrement}>Decrease</button>
+        <button className="increaseButton" onClick={this.props.onIncrement}>Increase</button>
+        <button className="decreaseButton" onClick={this.props.onDecrement}>Decrease</button>
       </div>
     );
   }
 }
 
+const mapStateToProps = () => {
+  return {
+
+  };
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    onIncrement: () => {
+      dispatch(Actions.increment());
+    },
+    onDecrement: () => {
+      dispatch(Actions.decrement());
+    }
+  }
+}
+
 // Inject just dispatch and don't listen to store
-export default connect()(CounterButtons);
+export default connect(mapStateToProps, mapDispatchToProps)(CounterButtons);
