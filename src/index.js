@@ -1,22 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+
 import Counter from './Counter';
 import CounterButtons from './CounterButtons';
-import { Provider } from 'react-redux';
-import { applyMiddleware, createStore } from 'redux';
-import { createLogger } from 'redux-logger';
-
-import reducer from './Reducer';
-
-const logger = createLogger({
-    collapsed: true,
-    diff: true,
-})
-
-const store = createStore(
-  reducer,
-  applyMiddleware(logger)
-);
+import store from './Store';
 
 const App = () => (
   <Provider store={store}>
