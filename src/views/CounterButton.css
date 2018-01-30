@@ -1,9 +1,13 @@
 .increaseButton {
   color: #0f0;
   font-size: 16pt;
+  border-color: #333;
+  border-radius: 4pt;
 }
 
 .decreaseButton {
   color: #f00;
   font-size: 16pt;
+  border-color: #333;
+  border-radius: 4pt;
 }
