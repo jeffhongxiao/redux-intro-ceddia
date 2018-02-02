@@ -10,16 +10,21 @@ const initialState = {
 };
 
 function reducer(state = initialState, action) {
+  const key = action.data;
+
   switch (action.type) {
+    // #1: use Object.assign()
     case ActionTypes.INCREMENT:
-      const key = action.data;
       const delta = {[key]: state[key] + 1};
-      var obj = Object.assign({}, state, delta);
+      const obj = Object.assign({}, state, delta);
       return obj;
+
+    // #2: use spread operator
     case ActionTypes.DECREMENT:
       return {
-        ...state
+        ...state, [key]: state[key] + 1
       };
+
     default:
       return state;
   }
