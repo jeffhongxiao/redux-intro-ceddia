@@ -2,7 +2,8 @@ import * as ActionTypes from './ActionTypes';
 
 const initialState = {
   counter1: 10,
-  counter2: 20
+  counter2: 20,
+  counter3: 30,
 };
 
 function reducer(state = initialState, action) {

@@ -11,6 +11,7 @@ const App = () => (
     <div>
       <CounterComponent counterName='counter1' />
       <CounterComponent counterName='counter2' />
+      <CounterComponent counterName='counter3' />
       <SumOfCounters />
     </div>
   </Provider>
