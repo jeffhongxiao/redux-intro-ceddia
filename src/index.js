@@ -8,7 +8,8 @@ import store from './Store';
 const App = () => (
   <Provider store={store}>
     <div>
-      <CounterComponent />
+      <CounterComponent counterName='counter1' />
+      <CounterComponent counterName='counter2' />
     </div>
   </Provider>
 );

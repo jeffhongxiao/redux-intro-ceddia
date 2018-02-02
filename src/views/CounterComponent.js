@@ -7,7 +7,7 @@ class CounterComponent extends React.Component {
   render() {
     return (
       <div>
-        <Counter />
+        <Counter counterName={this.props.counterName} />
         <CounterButtons />
       </div>
     )
