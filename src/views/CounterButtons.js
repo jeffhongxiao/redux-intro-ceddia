@@ -31,10 +31,10 @@ const mapStateToProps = () => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onIncrement: () => {
-      dispatch(Actions.increment());
+      dispatch(Actions.increment('counter1'));
     },
     onDecrement: () => {
-      dispatch(Actions.decrement());
+      dispatch(Actions.decrement('counter2'));
     }
   }
 }
