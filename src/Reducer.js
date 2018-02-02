@@ -22,7 +22,7 @@ function reducer(state = initialState, action) {
     // #2: use spread operator
     case ActionTypes.DECREMENT:
       return {
-        ...state, [key]: state[key] + 1
+        ...state, [key]: state[key] - 1
       };
 
     default:

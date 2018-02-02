@@ -10,7 +10,7 @@ class CounterButtons extends React.Component {
   render() {
     return (
       <div>
-        <button className="increaseButton" onClick={this.props.onIncrement}>Increase</button>
+        <button className="increaseButton" onClick={this.props.onIncrement}>Increase: {this.props.counterName}</button>
         <button className="decreaseButton" onClick={this.props.onDecrement}>Decrease</button>
       </div>
     );
@@ -31,11 +31,11 @@ const mapStateToProps = () => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onIncrement: () => {
-      const key = 'counter1'; // TODO: change it
+      const key = ownProps.counterName;
       dispatch(Actions.increment(key));
     },
     onDecrement: () => {
-      const key = 'counter2'; // TODO: change it
+      const key = ownProps.counterName;
       dispatch(Actions.decrement(key));
     }
   }
