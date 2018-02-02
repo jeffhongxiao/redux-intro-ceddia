@@ -6,10 +6,26 @@ class SumOfCounters extends React.Component {
     return (
       <div>
         <h2>Sum of all counters: </h2>
-        <div>TBA</div>
+        <div>{this.props.sum}</div>
       </div>
     );
   }
 }
 
-export default connect()(SumOfCounters);
+function mapStateToProps(state) {
+  return {
+    sum: calculateSum(state)
+  }
+}
+
+function calculateSum(state) {
+  let sum = 0;
+
+  for (const key in state) {
+    sum = sum + state[key];
+  }
+
+  return sum;
+}
+
+export default connect(mapStateToProps)(SumOfCounters);
