@@ -39,5 +39,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-// Inject just dispatch and don't listen to store
 export default connect(mapStateToProps, mapDispatchToProps)(CounterButtons);
