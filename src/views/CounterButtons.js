@@ -31,12 +31,10 @@ const mapStateToProps = () => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onIncrement: () => {
-      const key = ownProps.counterName;
-      dispatch(Actions.increment(key));
+      dispatch(Actions.increment(ownProps.counterName));
     },
     onDecrement: () => {
-      const key = ownProps.counterName;
-      dispatch(Actions.decrement(key));
+      dispatch(Actions.decrement(ownProps.counterName));
     }
   }
 }
